@@ -5,25 +5,35 @@ import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {SimpleHttpComponentComponent} from './simple-http-component/simple-http-component.component';
-import {YouTubeSearchComponentComponent} from './you-tube-search-component/you-tube-search-component.component';
+import {
+  YouTubeSearchComponent,
+  SearchBox, SearchResultComponent
+} from './you-tube-search-component/you-tube-search-component.component';
+
+/*
+ * Webpack
+ */
+require('css/styles.css');
 
 /*
  * Injectables
  */
-import {youTubeServiceInjectable} from './you-tube-search-component/you-tube-search-component.component';
+import {youTubeServiceInjectables} from './you-tube-search-component/you-tube-search-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleHttpComponentComponent,
-    YouTubeSearchComponentComponent
+    YouTubeSearchComponent,
+    SearchBox,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [youTubeServiceInjectable],
+  providers: [youTubeServiceInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule {
