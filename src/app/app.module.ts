@@ -19,6 +19,7 @@ require('css/styles.css');
  * Injectables
  */
 import {youTubeServiceInjectables} from './you-tube-search-component/you-tube-search-component.component';
+import { MoreHttpRequestsComponent } from './more-http-requests/more-http-requests.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {youTubeServiceInjectables} from './you-tube-search-component/you-tube-se
     SimpleHttpComponentComponent,
     YouTubeSearchComponent,
     SearchBox,
-    SearchResultComponent
+    SearchResultComponent,
+    MoreHttpRequestsComponent
   ],
   imports: [
     BrowserModule,
