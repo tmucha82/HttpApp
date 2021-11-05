@@ -1,0 +1,2495 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "SOAF API for IKO",
+    "description": "SOAF API for IKO System",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api/rest/1.0",
+      "description": "local server"
+    }
+  ],
+  "paths": {
+    "/dictionary/definition": {
+      "post": {
+        "summary": "Get dictionary definition",
+        "operationId": "submitDictionaryDefinition",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/dictionaryDefinitionSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/dictionaryDefinitionPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/dictionary/list": {
+      "post": {
+        "summary": "Get all dictionaries",
+        "operationId": "submitDictionaryList",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/dictionaryListSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/dictionaryListPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/statement/list": {
+      "post": {
+        "summary": "Get all statements",
+        "operationId": "submitStatementList",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/statementListSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/statementListPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/agreement/create": {
+      "post": {
+        "summary": "Create agreement",
+        "operationId": "submitAgreementCreate",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/agreementCreateSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/agreementCreatePost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/agreement/modify": {
+      "post": {
+        "summary": "Modify agreement",
+        "operationId": "submitAgreementModify",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/agreementModifySubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/agreementModifyPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/agreement/delete": {
+      "post": {
+        "summary": "Delete agreement",
+        "operationId": "submitAgreementDelete",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/agreementDeleteSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/agreementDeletePost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/agreement/details": {
+      "post": {
+        "summary": "agreement details",
+        "operationId": "submitAgreementDetails",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/agreementDetailsSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/agreementDetailsPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/vehicle/add": {
+      "post": {
+        "summary": "Add vehicle",
+        "operationId": "submitVehicleAdd",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/vehicleAddSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/vehicleAddPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/vehicle/modify": {
+      "post": {
+        "summary": "Modify vehicle",
+        "operationId": "submitVehicleModify",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/vehicleModifySubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/vehicleModifyPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/vehicle/delete": {
+      "post": {
+        "summary": "Delete vehicle",
+        "operationId": "submitVehicleDelete",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/vehicleDeleteSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/vehicleDeletePost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/vehicle/block": {
+      "post": {
+        "summary": "Block vehicle",
+        "operationId": "submitVehicleBlock",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/vehicleBlockSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/vehicleBlockPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/vehicle/list": {
+      "post": {
+        "summary": "List vehicles",
+        "operationId": "submitVehicleList",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/vehicleListSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/vehicleListPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/passage/list": {
+      "post": {
+        "summary": "Search passages",
+        "operationId": "submitPassageList",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/passageListSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/passageListPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/passage/payments-status": {
+      "post": {
+        "summary": "Change payments status",
+        "operationId": "submitPaymentsChangeStatus",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/passagePaymentsStatusSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/passagePaymentsStatusPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/passage/payment-repeat": {
+      "post": {
+        "summary": "Change payments status",
+        "operationId": "submitPaymentRepeat",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/passagePaymentRepeatSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/passagePaymentRepeatPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/invoice/download": {
+      "post": {
+        "summary": "download invoice for passage or correction",
+        "operationId": "submitInvoiceDownload",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/invoiceDownloadSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/invoiceDownloadPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/prepaid/initialize": {
+      "post": {
+        "summary": "download invoice for passage or correction",
+        "operationId": "submitPrepaidInitialize",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/prepaidInitializeSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/prepaidInitializePost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/prepaid/confirm": {
+      "post": {
+        "summary": "download invoice for passage or correction",
+        "operationId": "submitPrepaidConfirm",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/prepaidConfirmSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/prepaidConfirmPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    },
+    "/prepaid/cancel": {
+      "post": {
+        "summary": "download invoice for passage or correction",
+        "operationId": "submitPrepaidCancel",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/prepaidCancelSubmitPost"
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/prepaidCancelPost200"
+          },
+          "400": {
+            "$ref": "#/components/responses/post400"
+          },
+          "401": {
+            "$ref": "#/components/responses/post401"
+          },
+          "404": {
+            "$ref": "#/components/responses/post404"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "responses": {
+      "post400": {
+        "description": "Bad Request (global error)",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GlobalErrorResponse"
+            }
+          }
+        }
+      },
+      "post401": {
+        "description": "Unauthorized (global error)",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GlobalErrorResponse"
+            }
+          }
+        }
+      },
+      "post404": {
+        "description": "Not Found (global error)",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GlobalErrorResponse"
+            }
+          }
+        }
+      },
+      "dictionaryDefinitionPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/DictionaryDefinitionResponse"
+            }
+          }
+        }
+      },
+      "dictionaryListPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/DictionaryListResponse"
+            }
+          }
+        }
+      },
+      "statementListPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/StatementListResponse"
+            }
+          }
+        }
+      },
+      "agreementCreatePost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "agreementModifyPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "agreementDeletePost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "agreementDetailsPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AgreementDetailsResponse"
+            }
+          }
+        }
+      },
+      "vehicleAddPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "vehicleModifyPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "vehicleDeletePost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "vehicleBlockPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "vehicleListPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VehicleListResponse"
+            }
+          }
+        }
+      },
+      "passageListPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PassageListResponse"
+            }
+          }
+        }
+      },
+      "passagePaymentsStatusPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "passagePaymentRepeatPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "invoiceDownloadPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/InvoiceDownloadResponse"
+            }
+          }
+        }
+      },
+      "prepaidInitializePost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PrepaidInitializeResponse"
+            }
+          }
+        }
+      },
+      "prepaidConfirmPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PrepaidConfirmResponse"
+            }
+          }
+        }
+      },
+      "prepaidCancelPost200": {
+        "description": "success response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "dictionaryDefinitionSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/DictionaryDefinitionRequest"
+            }
+          }
+        }
+      },
+      "statementListSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/StatementListRequest"
+            }
+          }
+        }
+      },
+      "dictionaryListSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/DictionaryListRequest"
+            }
+          }
+        }
+      },
+      "agreementCreateSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AgreementCreateRequest"
+            }
+          }
+        }
+      },
+      "agreementModifySubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AgreementModifyRequest"
+            }
+          }
+        }
+      },
+      "agreementDeleteSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AgreementDeleteRequest"
+            }
+          }
+        }
+      },
+      "agreementDetailsSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AgreementDetailsRequest"
+            }
+          }
+        }
+      },
+      "vehicleAddSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VehicleAddRequest"
+            }
+          }
+        }
+      },
+      "vehicleModifySubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VehicleModifyRequest"
+            }
+          }
+        }
+      },
+      "vehicleDeleteSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VehicleDeleteRequest"
+            }
+          }
+        }
+      },
+      "vehicleBlockSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VehicleBlockRequest"
+            }
+          }
+        }
+      },
+      "vehicleListSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VehicleListRequest"
+            }
+          }
+        }
+      },
+      "passageListSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PassageListRequest"
+            }
+          }
+        }
+      },
+      "passagePaymentsStatusSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PassagePaymentsStatusRequest"
+            }
+          }
+        }
+      },
+      "passagePaymentRepeatSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PassagePaymentRepeatRequest"
+            }
+          }
+        }
+      },
+      "invoiceDownloadSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/InvoiceDownloadRequest"
+            }
+          }
+        }
+      },
+      "prepaidInitializeSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PrepaidInitializeRequest"
+            }
+          }
+        }
+      },
+      "prepaidConfirmSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PrepaidConfirmRequest"
+            }
+          }
+        }
+      },
+      "prepaidCancelSubmitPost": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PrepaidCancelRequest"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "GlobalErrorResponse": {
+        "description": "Object represents secition with error structure",
+        "type": "object",
+        "properties": {
+          "code": {
+            "description": "Error code",
+            "type": "string"
+          },
+          "message": {
+            "description": "Error message",
+            "type": "string"
+          }
+        }
+      },
+      "DictionaryMapping": {
+        "description": "Dictionary item definition",
+        "type": "object",
+        "required": [
+          "code",
+          "value"
+        ],
+        "properties": {
+          "code": {
+            "description": "Dictionary key",
+            "example": "PL",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "value": {
+            "description": "Dictionary value",
+            "example": "Polska",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        }
+      },
+      "StatementDefinition": {
+        "description": "Statement definition",
+        "type": "object",
+        "required": [
+          "code",
+          "value"
+        ],
+        "properties": {
+          "code": {
+            "description": "Statement code",
+            "example": "ST1_V0",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 20
+          },
+          "value": {
+            "description": "Statement value",
+            "example": "Value aa",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 1000
+          },
+          "status": {
+            "description": "Statement status. Values ACTIVE/INACTIVE",
+            "example": "ACTIVE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          },
+          "context": {
+            "description": "Statement context. Values VEHICLE/AGREEMENT",
+            "example": "VEHICLE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          }
+        }
+      },
+      "DictionaryDefinition": {
+        "description": "Dictionary definition",
+        "type": "object",
+        "required": [
+          "dictionaryName",
+          "items"
+        ],
+        "properties": {
+          "dictionaryName": {
+            "description": "External identifier - PID",
+            "example": "DICT_COUNTRY",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DictionaryMapping"
+            }
+          }
+        }
+      },
+      "InvoiceData": {
+        "description": "data for generate invoice",
+        "type": "object",
+        "required": [
+          "isCompany",
+          "city",
+          "postalCode",
+          "houseNumber"
+        ],
+        "properties": {
+          "isCompany": {
+            "description": "is business client",
+            "example": true,
+            "type": "boolean"
+          },
+          "companyName": {
+            "description": "Company name",
+            "example": "Kowalski Investment",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 1000
+          },
+          "name": {
+            "description": "First name",
+            "example": "Jan",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 64
+          },
+          "surname": {
+            "description": "Last name",
+            "example": "Kowalski",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 128
+          },
+          "nip": {
+            "example": "1196119101",
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 10
+          },
+          "city": {
+            "description": "City",
+            "example": "Warszawa",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 50
+          },
+          "postalCode": {
+            "description": "Postal code",
+            "example": "01-106",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 20
+          },
+          "street": {
+            "description": "Street",
+            "example": "Złota",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 200
+          },
+          "houseNumber": {
+            "description": "Houser number",
+            "example": "1A",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+          },
+          "flatNumber": {
+            "description": "Flat number",
+            "example": "77",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+          }
+        }
+      },
+      "HighwayListItem": {
+        "description": "Highway list item",
+        "type": "object",
+        "properties": {
+          "name": {
+            "example": "A1",
+            "description": "Highway name. Value defined in DICT_HIGHWAY",
+            "type": "string"
+          },
+          "nameDesc": {
+            "example": "Autostrada A1",
+            "description": "Value translated by DICT_HIGHWAY",
+            "type": "string"
+          }
+        }
+      },
+      "StatementListItem": {
+        "description": "Statement list item",
+        "type": "object",
+        "properties": {
+          "code": {
+            "description": "Statement code",
+            "example": "ST1_V0",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 20
+          },
+          "status": {
+            "description": "Statement status. Values ACTIVE/INACTIVE",
+            "example": "ACTIVE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          }
+        }
+      },
+      "VehicleListItem": {
+        "description": "Vehicle object",
+        "type": "object",
+        "properties": {
+          "status": {
+            "description": "Vehicle status. Value defined in DICT_VEHICLE_STATUS",
+            "example": "ACTIVE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          },
+          "name": {
+            "description": "Vehicle custom name",
+            "example": "Tiger",
+            "type": "string",
+            "maxLength": 100
+          },
+          "licensePlate": {
+            "description": "Recognized License Plate",
+            "example": "WE063HS",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 10
+          },
+          "licensePlateCountry": {
+            "description": "License Plate country as in ISO 3166. Value defined in DICT_COUNTRY",
+            "example": "PL",
+            "type": "string"
+          },
+          "licensePlateCountryDesc": {
+            "description": "Value translated by DICT_COUNTRY",
+            "example": "Polska",
+            "type": "string"
+          },
+          "vehicleClass": {
+            "description": "Class associated with the license plate in the White List. Value defined in DICT_VEHICLE_CLASS",
+            "example": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleClassDesc": {
+            "description": "Value translated by DICT_VEHICLE_CLASS",
+            "example": "Pojazdy o dwóch osiach, bez podwójnych kół, nieciągnące przyczepy",
+            "type": "string"
+          },
+          "highways": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HighwayListItem"
+            }
+          },
+          "statements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StatementListItem"
+            }
+          },
+          "hasInvoice": {
+            "description": "Flag - generate invoice for passage",
+            "example": true,
+            "type": "boolean"
+          },
+          "accountNumber": {
+            "example": "49102055610000320200189027",
+            "description": "Account number - format NRB",
+            "type": "string",
+            "minLength": 26,
+            "maxLength": 26
+          },
+          "vehicleId": {
+            "example": 8921,
+            "description": "vehicle identifier",
+            "type": "integer",
+            "format": "int32"
+          },
+          "axlesNumber": {
+            "description": "Nubmber of axles",
+            "example": "2",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "euroEmission": {
+            "description": "Euro class. Value defined in DICT_EURO_EMISSION",
+            "example": "EURO5",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 5
+          },
+          "createdAt": {
+            "description": "Date and time, when vehicle has been add",
+            "example": "2020-03-12T09:25:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifiedAt": {
+            "description": "Date and time, when vehicle has been modified",
+            "example": "",
+            "type": "string",
+            "format": "date-time"
+          },
+          "invoiceData": {
+            "$ref": "#/components/schemas/InvoiceData"
+          }
+        }
+      },
+      "PassageListData": {
+        "description": "Passage list data object",
+        "type": "object",
+        "properties": {
+          "agreementStatus": {
+            "description": "Agreement status. Value defined in DICT_AGREEMENT_STATUS",
+            "example": "ACTIVE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          },
+          "unpaidAmount": {
+            "description": "Gross amount - value with 2 decimal places.",
+            "example": "29.70",
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "CorrectionData": {
+        "description": "Passsage correction data",
+        "type": "object",
+        "properties": {
+          "correctionId": {
+            "example": 77,
+            "description": "correction identifier",
+            "type": "integer",
+            "format": "int32"
+          },
+          "currency": {
+            "description": "Currency of payment in ISO4217",
+            "example": "PLN",
+            "type": "string"
+          },
+          "grossAmount": {
+            "description": "Gross amount - value with 2 decimal places.",
+            "example": "29.70",
+            "type": "number",
+            "format": "double"
+          },
+          "netAmount": {
+            "description": "Netto amount - value with 2 decimal places.",
+            "example": "24.15",
+            "type": "number",
+            "format": "double"
+          },
+          "vatAmount": {
+            "description": "VAT amount - value with 2 decimal places.",
+            "example": "5.55",
+            "type": "number",
+            "format": "double"
+          },
+          "vatRate": {
+            "description": "VAT percentage without decimal points.",
+            "example": 23,
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleClass": {
+            "description": "Class associated with the license plate in the White List. Value defined in DICT_VEHICLE_CLASS",
+            "example": 2,
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleClassDesc": {
+            "description": "Value translated by DICT_VEHICLE_CLASS",
+            "example": "Motocykl",
+            "type": "string"
+          },
+          "paymentStatus": {
+            "description": "Status of payment realization. Value defined in DICT_PASSAGE_PAYMENT_STATUS",
+            "example": "DONE",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "invoiceUid": {
+            "description": "Invoice UID. Parameter value allow to to download invoice content",
+            "example": "00001282",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "operation": {
+            "description": "Operation type, alloved values [RETURN,PAYMENT]",
+            "example": "RETURN",
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          }
+        }
+      },
+      "PassageListItem": {
+        "description": "Passage object",
+        "type": "object",
+        "properties": {
+          "highway": {
+            "example": "A1",
+            "description": "Highway name. Value defined in DICT_HIGHWAY",
+            "type": "string"
+          },
+          "passageId": {
+            "example": 3433,
+            "description": "passage identifier",
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "description": "Passage type. Value defined in DICT_PASSAGE_TYPE",
+            "example": "PASSAGE",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "entryTransactionId": {
+            "example": "20190917170730330500334252",
+            "description": "Entry transaction identifier. Can be the same as transactionId when highway does not usesections.Can be 'UNKNOWN'",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 26
+          },
+          "entryBarrier": {
+            "example": "112",
+            "description": "Entry toll plaza unique identifier. Value defined in DICT_PASSAGE_BARRIER",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 32
+          },
+          "entryBarrierDesc": {
+            "description": "Value translated by DICT_PASSAGE_BARRIER",
+            "example": "SPO Stanisławie",
+            "type": "string"
+          },
+          "entryTime": {
+            "description": "Date and time of entry in ISO8601 format",
+            "example": "2018-12-03T04:25:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "exitTransactionId": {
+            "example": "20200317170730330500554252",
+            "description": "Unique transaction identifier",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 26
+          },
+          "exitBarrier": {
+            "example": "124",
+            "description": "Exit toll plaza unique identifier. Value defined in DICT_PASSAGE_BARRIER",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 32
+          },
+          "exitBarrierDesc": {
+            "description": "Value translated by DICT_PASSAGE_BARRIER",
+            "example": "SPO Stanisławie",
+            "type": "string"
+          },
+          "exitTime": {
+            "description": "Date and time of exit in ISO 8601 format",
+            "example": "2018-12-03T06:31:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "currency": {
+            "description": "Currency of payment in ISO4217",
+            "example": "PLN",
+            "type": "string"
+          },
+          "grossAmount": {
+            "description": "Gross amount - value with 2 decimal places.",
+            "example": "29.70",
+            "type": "number",
+            "format": "double"
+          },
+          "netAmount": {
+            "description": "Netto amount - value with 2 decimal places.",
+            "example": "24.15",
+            "type": "number",
+            "format": "double"
+          },
+          "vatAmount": {
+            "description": "VAT amount - value with 2 decimal places.",
+            "example": "5.55",
+            "type": "number",
+            "format": "double"
+          },
+          "vatRate": {
+            "description": "VAT percentage without decimal points.",
+            "example": 23,
+            "type": "integer",
+            "format": "int32"
+          },
+          "country": {
+            "description": "Country code. Value defined in DICT_COUNTRY",
+            "example": "PL",
+            "type": "string"
+          },
+          "countryDesc": {
+            "description": "Value translated by DICT_COUNTRY",
+            "example": "Polska",
+            "type": "string"
+          },
+          "licensePlate": {
+            "description": "Recognized License Plate",
+            "example": "WE063HS",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 10
+          },
+          "vehicleClass": {
+            "description": "Class associated with the license plate in the White List. Value defined in DICT_VEHICLE_CLASS",
+            "example": 2,
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleClassDesc": {
+            "description": "Value translated by DICT_VEHICLE_CLASS",
+            "example": "Motocykl",
+            "type": "string"
+          },
+          "status": {
+            "description": "Passage status code. Value defined in DICT_PASSAGE_STATUS",
+            "example": "STARTED",
+            "type": "string"
+          },
+          "paymentStatus": {
+            "description": "Status of payment realization. Value defined in DICT_PASSAGE_PAYMENT_STATUS",
+            "example": "DONE",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "invoiceUid": {
+            "description": "Invoice UID. Parameter value allow to to download invoice content",
+            "example": "00001282",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "distance": {
+            "description": "Distance",
+            "example": 2,
+            "type": "number"
+          },
+          "axlesNumber": {
+            "description": "Nubmber of axles",
+            "example": "2",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "euroEmission": {
+            "description": "Euro class. Value defined in DICT_EURO_EMISSION",
+            "example": "EURO5",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 5
+          },
+          "correction": {
+            "$ref": "#/components/schemas/CorrectionData"
+          }
+        }
+      },
+      "ControlInfo": {
+        "description": "control info",
+        "type": "object",
+        "properties": {
+          "totalItems": {
+            "example": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Pageable": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "example": 0,
+            "type": "integer"
+          },
+          "pageSize": {
+            "example": 20,
+            "type": "integer"
+          }
+        }
+      },
+      "DictionaryDefinitionRequest": {
+        "description": "Request definition",
+        "type": "object",
+        "required": [
+          "dictionaryName"
+        ],
+        "properties": {
+          "dictionaryName": {
+            "description": "SOAF dictionary name, available value [DICT_COUNTRY, DICT_PASSAGE_BARRIER, DICT_AGREEMENT_STATUS, DICT_VEHICLE_STATUS, DICT_VEHICLE_CLASS, DICT_VEHICLE_CLASS_DESC, DICT_HIGHWAY, DICT_HIGHWAY_COUNTRY, DICT_PASSAGE_TYPE, DICT_AXLES_NUMBER, DICT_EURO_EMISSION, DICT_HIGHWAY_TICKET, DICT_HIGHWAY_PASSAGE_BARRIER, DICT_HIGHWAY_VEHICLE_CLASS, DICT_PASSAGE_STATUS, DICT_PASSAGE_PAYMENT_STATUS, DICT_ERROR_CODE]",
+            "example": "DICT_COUNTRY",
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 50
+          }
+        }
+      },
+      "DictionaryDefinitionResponse": {
+        "description": "Request definition",
+        "type": "object",
+        "properties": {
+          "dictionary": {
+            "$ref": "#/components/schemas/DictionaryDefinition"
+          }
+        }
+      },
+      "StatementListRequest": {
+        "description": "Request of statement list",
+        "type": "object",
+        "properties": {
+          "context": {
+            "description": "Statement context. Values VEHICLE/AGREEMENT",
+            "example": "VEHICLE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          }
+        }
+      },
+      "DictionaryListRequest": {
+        "description": "Request of dictionary list",
+        "type": "object",
+        "properties": {
+          "dictionaries": {
+            "description": "SOAF dictionary name, available value [DICT_COUNTRY, DICT_PASSAGE_BARRIER, DICT_AGREEMENT_STATUS, DICT_VEHICLE_STATUS, DICT_VEHICLE_CLASS, DICT_VEHICLE_CLASS_DESC, DICT_HIGHWAY, DICT_HIGHWAY_COUNTRY, DICT_PASSAGE_TYPE, DICT_AXLES_NUMBER, DICT_EURO_EMISSION, DICT_HIGHWAY_TICKET, DICT_HIGHWAY_PASSAGE_BARRIER, DICT_HIGHWAY_VEHICLE_CLASS, DICT_PASSAGE_STATUS, DICT_PASSAGE_PAYMENT_STATUS, DICT_ERROR_CODE]",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "DICT_COUNTRY",
+              "DICT_ERROR_CODE",
+              "DICT_PASSAGE_BARRIER"
+            ]
+          }
+        }
+      },
+      "AgreementCreateRequest": {
+        "description": "Request of create agreement",
+        "type": "object",
+        "required": [
+          "externalId",
+          "email",
+          "statements"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "email": {
+            "description": "Email address",
+            "example": "jan.kowalski@gmial.com",
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 100
+          },
+          "statements": {
+            "description": "Accepted statements",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "RODO_V0",
+              "RESIDENT_V0",
+              "EARLY_START_V0",
+              "REGULATION_V0"
+            ]
+          }
+        }
+      },
+      "AgreementModifyRequest": {
+        "description": "Request of create agreement",
+        "type": "object",
+        "required": [
+          "externalId",
+          "email"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "email": {
+            "description": "Email address",
+            "example": "jan.kowalski@gmial.com",
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 100
+          }
+        }
+      },
+      "AgreementDeleteRequest": {
+        "description": "Request of delete agreement",
+        "type": "object",
+        "required": [
+          "externalId",
+          "reason"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "reason": {
+            "description": "Reason while agreement should be deleted. Available options are CLIENT/CLOSED_NRB",
+            "example": "CLOSED_NRB",
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 10
+          }
+        }
+      },
+      "AgreementDetailsRequest": {
+        "description": "Request of agreement details",
+        "type": "object",
+        "required": [
+          "externalId"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          }
+        }
+      },
+      "VehicleAddRequest": {
+        "description": "Request of vehicle add",
+        "type": "object",
+        "required": [
+          "externalId",
+          "licensePlate",
+          "licensePlateCountry",
+          "vehicleClass",
+          "accountNumber",
+          "highways",
+          "statements",
+          "hasInvoice"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "licensePlate": {
+            "description": "Recognized License Plate",
+            "example": "WE063HS",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 10
+          },
+          "name": {
+            "description": "Vehicle custom name",
+            "example": "Tiger",
+            "type": "string",
+            "maxLength": 100
+          },
+          "licensePlateCountry": {
+            "description": "License Plate country as in ISO 3166. Value defined in DICT_COUNTRY",
+            "example": "PL",
+            "type": "string"
+          },
+          "vehicleClass": {
+            "description": "Class associated with the license plate in the White List. Value defined in DICT_VEHICLE_CLASS",
+            "example": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountNumber": {
+            "example": "49102055610000320200189027",
+            "description": "Account number - format NRB",
+            "type": "string",
+            "minLength": 26,
+            "maxLength": 26
+          },
+          "highways": {
+            "description": "List of higways. Single value defined in DICT_HIGHWAY",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "A1"
+            ]
+          },
+          "axlesNumber": {
+            "description": "Nubmber of axles",
+            "example": "2",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "euroEmission": {
+            "description": "Euro class. Value defined in DICT_EURO_CLASS",
+            "example": "EURO5",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 5
+          },
+          "statements": {
+            "description": "Accepted statements",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "DEBIT_BANK_ACCOUNT_V0"
+            ]
+          },
+          "hasInvoice": {
+            "description": "Flag - generate invoice for passage",
+            "example": true,
+            "type": "boolean"
+          },
+          "invoiceData": {
+            "$ref": "#/components/schemas/InvoiceData"
+          }
+        }
+      },
+      "VehicleModifyRequest": {
+        "description": "Request of vehicle add",
+        "type": "object",
+        "required": [
+          "externalId",
+          "licensePlate",
+          "licensePlateCountry",
+          "vehicleClass",
+          "accountNumber",
+          "highways",
+          "statements",
+          "hasInvoice"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "name": {
+            "description": "Vehicle custom name",
+            "example": "Tiger",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "licensePlate": {
+            "description": "Recognized License Plate",
+            "example": "WE063HS",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 10
+          },
+          "licensePlateCountry": {
+            "description": "License Plate country as in ISO 3166. Value defined in DICT_COUNTRY",
+            "example": "PL",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+          },
+          "vehicleClass": {
+            "description": "Class associated with the license plate in the White List. Value defined in DICT_VEHICLE_CLASS",
+            "example": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountNumber": {
+            "example": "49102055610000320200189027",
+            "description": "Account number - format NRB",
+            "type": "string",
+            "minLength": 26,
+            "maxLength": 26
+          },
+          "highways": {
+            "description": "List of higways. Single value defined in DICT_HIGHWAY",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "A1"
+            ]
+          },
+          "axlesNumber": {
+            "description": "Nubmber of axles",
+            "example": "2",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "euroEmission": {
+            "description": "Euro class. Value defined in DICT_EURO_CLASS",
+            "example": "EURO5",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 5
+          },
+          "statements": {
+            "description": "Accepted statements",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "DEBIT_BANK_ACCOUNT_V0"
+            ]
+          },
+          "hasInvoice": {
+            "description": "Flag - generate invoice for passage",
+            "example": true,
+            "type": "boolean"
+          },
+          "invoiceData": {
+            "$ref": "#/components/schemas/InvoiceData"
+          }
+        }
+      },
+      "VehicleDeleteRequest": {
+        "description": "Request of vehicle add",
+        "type": "object",
+        "required": [
+          "externalId",
+          "licensePlate"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "licensePlate": {
+            "description": "Recognized License Plate",
+            "example": "WE063HS",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 10
+          }
+        }
+      },
+      "VehicleBlockRequest": {
+        "description": "Request of vehicle block",
+        "type": "object",
+        "required": [
+          "externalId",
+          "accountNumber"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "accountNumber": {
+            "example": "49102055610000320200189027",
+            "description": "Account number - format NRB",
+            "type": "string",
+            "minLength": 26,
+            "maxLength": 26
+          },
+          "reason": {
+            "example": "Account has been closed",
+            "description": "Blockade reason description",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        }
+      },
+      "VehicleListSearchCriteria": {
+        "description": "Vehice list search criteria",
+        "type": "object",
+        "required": [
+          "externalId"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "statuses": {
+            "description": "List of vehicle status. Single value defined in DICT_VEHICLE_STATUS",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "ACTIVE"
+            ]
+          }
+        }
+      },
+      "PassageListSearchCriteria": {
+        "description": "Passage list search criteria",
+        "type": "object",
+        "required": [
+          "externalId",
+          "types",
+          "statuses"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "types": {
+            "description": "List of passage types. Single value defined in DICT_PASSAGE_TYPE",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "PASSAGE",
+              "PREPAID"
+            ]
+          },
+          "statuses": {
+            "description": "List of passage status. Single value defined in DICT_PASSAGE_STATUS",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "STARTED",
+              "ENDED"
+            ]
+          }
+        }
+      },
+      "PassagePaymentStatusItem": {
+        "description": "Passage payment status item",
+        "type": "object",
+        "properties": {
+          "passageId": {
+            "example": 3433,
+            "description": "passage identifier",
+            "type": "integer",
+            "format": "int32"
+          },
+          "correctionId": {
+            "example": 77,
+            "description": "correction identifier",
+            "type": "integer",
+            "format": "int32"
+          },
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "paymentStatus": {
+            "description": "Status of payment realization. Value defined in DICT_PASSAGE_PAYMENT_STATUS",
+            "example": "ERROR",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "paymentDate": {
+            "description": "Date and time of payment realization",
+            "example": "2020-03-12T04:25:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "paymentErrorCode": {
+            "description": "Error code of payment realization in PKO (Native IKO error code)",
+            "example": "BC-12",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "paymentErrorMessage": {
+            "description": "Information ab",
+            "example": "Account number has been blocked",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        }
+      },
+      "PassagePaymentsStatus": {
+        "description": "Passage payments with realization status",
+        "type": "object",
+        "required": [
+          "payments"
+        ],
+        "properties": {
+          "payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassagePaymentStatusItem"
+            }
+          }
+        }
+      },
+      "VehicleListRequest": {
+        "description": "Request of vehicle list",
+        "type": "object",
+        "required": [
+          "searchCriteria",
+          "pageable"
+        ],
+        "properties": {
+          "searchCriteria": {
+            "$ref": "#/components/schemas/VehicleListSearchCriteria"
+          },
+          "pageable": {
+            "$ref": "#/components/schemas/Pageable"
+          }
+        }
+      },
+      "PassageListRequest": {
+        "description": "Request of passage list",
+        "type": "object",
+        "required": [
+          "searchCriteria",
+          "pageable"
+        ],
+        "properties": {
+          "searchCriteria": {
+            "$ref": "#/components/schemas/PassageListSearchCriteria"
+          },
+          "pageable": {
+            "$ref": "#/components/schemas/Pageable"
+          }
+        }
+      },
+      "PassagePaymentsStatusRequest": {
+        "description": "Request of passage payments status chagne",
+        "type": "object",
+        "required": [
+          "passages"
+        ],
+        "properties": {
+          "passages": {
+            "$ref": "#/components/schemas/PassagePaymentsStatus"
+          }
+        }
+      },
+      "PassagePaymentRepeatRequest": {
+        "description": "Request of passage payment repeat",
+        "type": "object",
+        "required": [
+          "externalId"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          }
+        }
+      },
+      "InvoiceDownloadRequest": {
+        "description": "Request of download invoice",
+        "type": "object",
+        "required": [
+          "externalId",
+          "invoiceUid",
+          "invoiceType"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "invoiceUid": {
+            "description": "Invoice UID. Parameter value allow to to download invoice content",
+            "example": "00001282",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "invoiceType": {
+            "description": "Invoice type, alloved values [PASSAGE,CORRECTION]",
+            "example": "PASSAGE",
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          }
+        }
+      },
+      "PrepaidInitializeRequest": {
+        "description": "Request prepaid order initialize",
+        "type": "object",
+        "required": [
+          "externalId",
+          "vehicleId",
+          "invoiceType"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "vehicleId": {
+            "example": 8921,
+            "description": "identyfikator pojazdu",
+            "type": "integer"
+          },
+          "highway": {
+            "example": "A2-GOV",
+            "description": "Highway name. Value defined in DICT_HIGHWAY_TICKET",
+            "type": "string"
+          },
+          "entryBarrier": {
+            "example": "112",
+            "description": "Entry toll plaza unique identifier. Value defined in DICT_PASSAGE_BARRIER",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 32
+          },
+          "entryTime": {
+            "description": "Date and time of entry in ISO8601 format",
+            "example": "2018-12-03T04:25:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "exitBarrier": {
+            "example": "124",
+            "description": "Exit toll plaza unique identifier. Value defined in DICT_PASSAGE_BARRIER",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 32
+          }
+        }
+      },
+      "PrepaidConfirmRequest": {
+        "description": "Request prepaid order confirm",
+        "type": "object",
+        "required": [
+          "externalId",
+          "entryTransactionId",
+          "paymentDate",
+          "blockadeNumber"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "entryTransactionId": {
+            "example": "20190917170730330500334252",
+            "description": "Temporary ticket ID",
+            "type": "string",
+            "maxLength": 26
+          },
+          "paymentDate": {
+            "description": "Date and time of payment in ISO8601 format",
+            "example": "2018-12-03T04:25:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "blockadeNumber": {
+            "example": "18475",
+            "description": "IKO payment blockade number",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          }
+        }
+      },
+      "PrepaidCancelRequest": {
+        "description": "Request prepaid order cancell",
+        "type": "object",
+        "required": [
+          "externalId",
+          "exitTransactionId"
+        ],
+        "properties": {
+          "externalId": {
+            "description": "External identifier - PID",
+            "example": "60655095",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "exitTransactionId": {
+            "example": "1123",
+            "description": "Ticket identifier",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 26
+          }
+        }
+      },
+      "StatementListResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "required": [
+          "statements",
+          "control"
+        ],
+        "properties": {
+          "statements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StatementDefinition"
+            }
+          },
+          "control": {
+            "$ref": "#/components/schemas/ControlInfo"
+          }
+        }
+      },
+      "AgreementDetailsResponse": {
+        "description": "Response of agreement details",
+        "type": "object",
+        "required": [
+          "status",
+          "email",
+          "hasVehicle",
+          "hasActivePassage",
+          "unpaidAmount"
+        ],
+        "properties": {
+          "status": {
+            "description": "Agreement status. Value defined in DICT_AGREEMENT_STATUS",
+            "example": "ACTIVE",
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 10
+          },
+          "email": {
+            "description": "Email address",
+            "example": "jan.kowalski@gmial.com",
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 100
+          },
+          "hasVehicle": {
+            "description": "Flag - has ACTIVE vehicles",
+            "example": true,
+            "type": "boolean"
+          },
+          "hasActivePassage": {
+            "description": "Flag - has started passage",
+            "example": true,
+            "type": "boolean"
+          },
+          "unpaidAmount": {
+            "description": "Unpaid amount - value with 2 decimal places.",
+            "example": "29.70",
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "DictionaryListResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "required": [
+          "dictionaries",
+          "control"
+        ],
+        "properties": {
+          "dictionaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DictionaryDefinition"
+            }
+          },
+          "control": {
+            "$ref": "#/components/schemas/ControlInfo"
+          }
+        }
+      },
+      "VehicleListResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "required": [
+          "items",
+          "hasNextPage",
+          "totalPages"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VehicleListItem"
+            }
+          },
+          "hasNextPage": {
+            "example": false,
+            "type": "boolean"
+          },
+          "totalPages": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageNumber": {
+            "example": 0,
+            "type": "integer"
+          }
+        }
+      },
+      "PassageListResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "required": [
+          "data",
+          "items",
+          "hasNextPage",
+          "totalPages"
+        ],
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/PassageListData"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PassageListItem"
+            }
+          },
+          "hasNextPage": {
+            "example": false,
+            "type": "boolean"
+          },
+          "totalPages": {
+            "example": 1,
+            "type": "integer"
+          },
+          "pageNumber": {
+            "example": 0,
+            "type": "integer"
+          }
+        }
+      },
+      "InvoiceDownloadResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "required": [
+          "fileName",
+          "content"
+        ],
+        "properties": {
+          "fileName": {
+            "description": "Temporary fileName = invoiceUid",
+            "example": "sdfs_ee8ccfe3-1d3b-4766-9094-cb",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 32
+          },
+          "content": {
+            "description": "Encoded Base64 file content",
+            "example": "Rk1SACAyMAAAAAFiAAABQAHgAMUAxQEAAABGNkDZADP/SEC8AD6CSECqAEcGSED+AFJtO0CgAGCKZEC6AGuFZEDgAHz1ZECzAI6HZEENAJluNEBWAJ4ZZEB1AKkTZEECALbuZEA/ALqfSECCALySSECxAMP/ZECIAMURVUAXAN2jGkCnAOD8ZEAoAOWlZEBnAOyhLkCyAP/tZECHAQMSGkD8AQTdZECfASKFGkCHASUaGkA1ASy6ZEDAAS3JZEDPAS7NZEAnATG4ZEDxATzOZEBOAUPLZEBzAVbuGkCAAWF8NEDTAWsxLkDnAXa0LkC/AX2nLkC0AYojIEBMAYvkSEDJAa0fT0CsAbwVIIDqANTsZIDIAPfnZICbAQKHO4D5AR/XZIBlASS7IIEoASbYO4CsAUetLoDvAVXSZIDaAVvDO4EHAWrLZICsAX2fNIDnAYEwNIDQAZKnT4BfAZxtZAAA",
+            "type": "string"
+          }
+        }
+      },
+      "PrepaidInitializeResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "properties": {
+          "entryTransactionId": {
+            "example": "1123",
+            "description": "Temporary ticket ID",
+            "type": "string",
+            "maxLength": 26
+          },
+          "exitTime": {
+            "description": "Date and time until ticket is valid in ISO 8601 format",
+            "example": "2018-12-03T06:31:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "grossAmount": {
+            "description": "ticket price - value with 2 decimal places.",
+            "example": "29.70",
+            "type": "number",
+            "format": "double"
+          },
+          "accountNumber": {
+            "example": "49102055610000320200189027",
+            "description": "Account number - format NRB",
+            "type": "string",
+            "minLength": 26,
+            "maxLength": 26
+          }
+        }
+      },
+      "PrepaidConfirmResponse": {
+        "description": "Response definition",
+        "type": "object",
+        "properties": {
+          "passageId": {
+            "example": 3433,
+            "description": "passage identifier",
+            "type": "integer",
+            "format": "int32"
+          },
+          "entryBarrierDesc": {
+            "description": "Value translated by DICT_PASSAGE_BARRIER",
+            "example": "SPO Stanisławie",
+            "type": "string"
+          },
+          "entryTime": {
+            "description": "Ticket start date value in ISO8601 format",
+            "example": "2018-12-03T04:25:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "exitTransactionId": {
+            "example": "343233",
+            "description": "Unique ticket number in eBilet system",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 26
+          },
+          "exitBarrierDesc": {
+            "description": "Value translated by DICT_PASSAGE_BARRIER",
+            "example": "SPO Stanisławie",
+            "type": "string"
+          },
+          "exitTime": {
+            "description": "Ticket valid untill date. Value in ISO8601 format",
+            "example": "2018-12-03T06:31:00.950+0100",
+            "type": "string",
+            "format": "date-time"
+          },
+          "currency": {
+            "description": "Currency of payment in ISO4217",
+            "example": "PLN",
+            "type": "string"
+          },
+          "grossAmount": {
+            "description": "Gross amount - value with 2 decimal places.",
+            "example": "29.70",
+            "type": "number",
+            "format": "double"
+          },
+          "licensePlate": {
+            "description": "Recognized License Plate",
+            "example": "WE063HS",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 10
+          },
+          "licensePlateCountry": {
+            "description": "License Plate country as in ISO 3166. Value defined in DICT_COUNTRY",
+            "example": "PL",
+            "type": "string"
+          },
+          "licensePlateCountryDesc": {
+            "description": "Value translated by DICT_COUNTRY",
+            "example": "Polska",
+            "type": "string"
+          },
+          "vehicleClassDesc": {
+            "description": "Value translated by DICT_VEHICLE_CLASS",
+            "example": "Pojazdy o dwóch osiach, bez podwójnych kół, nieciągnące przyczepy",
+            "type": "string"
+          },
+          "accountNumber": {
+            "example": "49102055610000320200189027",
+            "description": "Account number - format NRB",
+            "type": "string",
+            "minLength": 26,
+            "maxLength": 26
+          },
+          "distance": {
+            "description": "Distance",
+            "example": 25,
+            "type": "number"
+          },
+          "axlesNumberDesc": {
+            "description": "Value translated by DICT_AXLES_NUMBER",
+            "example": "2",
+            "type": "string"
+          },
+          "euroEmissionDesc": {
+            "description": "Value translated by DICT_EURO_CLASS",
+            "example": "EURO5",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
